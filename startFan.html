@@ -1,0 +1,39 @@
+<!--WAP in javascript to start fan on button click event-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			var i=90;
+			//confirm Message for User
+			function checkStatus()
+			{
+				var s=confirm("Do you want to Start Fan?");
+				if(s==true)
+				{moveFan();}
+				else
+				{alert("Thanks ! save Electric Light");}
+			}
+			{
+			function moveFan()
+			{
+				i=i+30;
+				var im=document.getElementById("img1");
+				im.style='transform:rotate('+i+'deg)';
+				window.setTimeout("moveFan()",10);
+			}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h1>Click on Button to start fan</h1>
+		<hr/>
+		<div id="d1" style="height:350px;width:400px;border:5px solid;border-radius:50%;margin:0px auto;text-align:center;">
+			<img id="img1" src="images/fan1.gif" height="320px" width="320px" style="padding-top:15px;border-radius:50%;"/>
+		</div>
+		<br/><br/>
+		<center>
+		<button onclick="checkStatus();" style="width:200px;height:40px;background:navy;color:white;font-size:25px;">Start Fan</button>
+		</center>
+	</body>
+</html>

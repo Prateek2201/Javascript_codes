@@ -1,0 +1,24 @@
+<!-- Make the Image Slider -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Image-Slider</title>
+		<script>
+			var imgArr=["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"];
+			index=0;
+			function Slider()
+			{
+				document.getElementById("img").src="images/"+imgArr[index];
+				index++;
+				if(index==imgArr.length)
+				{
+					index=0;
+				}
+				window.setTimeout("Slider();",1000);
+			}
+		</script>
+	</head>
+	<body onload="Slider();" align="center">
+		<img id="img" height="590px" width="1000px" style="border:10px solid red;box-shadow:10px 10px 5px orange;"/>
+	</body>
+</html>

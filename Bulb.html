@@ -1,0 +1,35 @@
+<!--WAP in JS to on/off bulb -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bulb Experiment</title>
+		<script>
+			function onOffBulb()
+			{
+				var im=document.getElementById("img1");
+				var b=document.getElementById("btn");
+				if(b.value=="ON")
+				{
+					im.src="images/On.gif";
+					b.value="OFF";
+					b.style.background="red";
+				}
+				else
+				{
+					im.src="images/Off.gif";
+					b.value="ON"
+					b.style.background="green";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<center>
+		<h1>Click on Button to on & off Bulb</h1>
+		<hr/>
+		<img src="images/Off.gif" id="img1"/>
+		<br/><br/>
+		<input type="button" value="ON" id="btn" onclick="onOffBulb();" style="width:200px;height:40px;background:green;font-size:white;color:white;"/>
+		</center>
+	</body>
+</html>

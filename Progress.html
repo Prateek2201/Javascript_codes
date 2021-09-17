@@ -1,0 +1,27 @@
+<!-- Make a progress bar by using javascript -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			var i=0;
+			function moveBar()
+			{
+				var prog=document.getElementById("p1");
+				prog.value=i;
+				i++;
+				if(i==100)
+				{
+				   alert("Progress Completed Now ..");
+				}
+				window.setTimeout("moveBar()",50);
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Click on Button to start Progress Bar </h1>
+		<hr/>
+		<progress value="10" min="0" max="100" id="p1" style="width:95%;height:50px;background-color:green;"></progress>
+		<br/><br/>
+		<input type="button" value="Click Here" onclick="moveBar()" style="height:50px;width:230px;background:red;color:white;font-size:20px;"/>
+	</body>
+</html>

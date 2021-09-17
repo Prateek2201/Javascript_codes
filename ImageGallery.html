@@ -1,0 +1,46 @@
+<!--Make Image Gallery with Next and Previous Button -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			//create  an array to collect images
+			var imgArr=["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"];
+			var index=0;
+			function nextImages()
+			{
+				var im=document.getElementById("img1");
+				im.src="images/"+imgArr[index];
+				index++;
+				if(index==imgArr.length)
+				{
+					index=index-1;
+				}
+			}
+			function prevImages()
+			{
+				index--;
+				if(index<=0)
+				{
+					index=0;
+					var im=document.getElementById("img1").src="images/"+imgArr[index];
+				}
+				else
+				{
+					var im=document.getElementById("img1").src="images/"+imgArr[index];
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Click Button to Previous and Next Images</h1>
+		<hr/>
+		<center>
+			<div id="d1" style="width:50%;height:300px;border:10px solid red;box-shadow:10px 10px 5px orange;">
+				<img id="img1" src="images/1.jpg" height="300px" width="100%"/>
+				<br/><br/><br/><br/>
+				<button onclick="prevImages();" style="width:60px;height:40px;font-size:22px;"><<</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<button onclick="nextImages();" style="width:60px;height:40px;font-size:22px;">>></button>
+			</div>
+		</center>
+	</body>
+</html>

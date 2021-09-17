@@ -1,0 +1,45 @@
+<!--Enquiry Form-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			input
+			{
+				height:40px;
+				width:230px;
+				padding:5px;
+			}
+		</style>
+		<script>
+			function openBox()
+			{
+				var div=document.getElementById("enquiry");
+				var st=div.style.display;
+				if(st=="none")
+				{
+					div.style.display="block";
+				}
+				else
+				{
+					div.style.display="none";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="enquiry" style="width:25%;;height:350px;background:orange;color:white;margin:0px auto;padding:15px;position:absolute;top:200px;right:20px;display:none;">
+			Name<br/>
+			<input type="text"/><br/>
+			Email ID<br/>
+			<input type="email"/><br/>
+			Mobile Number<br/>
+			<input type="number"/><br/>
+			Message<br/>
+			<input type="text"/><br/><br/>
+			<button style="height:30px;width:150px;background:blue;color:white;font-size:20px;margin-left:50px;">Enquiry</button>
+		</div>
+		<span onclick="openBox()" style="height:30px;width:200px;background:navy;color:white;font-size:20px;text-align:center;padding:10px;cursor:pointer;border-radius:20px 20px 0px 0px;position:absolute;top:580px;right:20px;">
+			Enquiry Now
+		</span>
+	</body>
+</html>
